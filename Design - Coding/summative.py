@@ -9,7 +9,6 @@ import curses
 #intializing python cursor
 stdscr=curses.initscr()
 curses.endwin()
-
 # A class with ANCII characters so that I can use color in the game
 class colors:
   off='\033[0m' 
@@ -262,7 +261,7 @@ def askPersonalQuestions():
   curses.flushinp()
   global support
   support=input()
-  support.replace("my", "")
+  support=support.replace("my", "")
   time.sleep(2)
   os.system("clear")
 
@@ -693,7 +692,7 @@ def quiz():
       os.system("clear")
       
   #Prints final score
-  print(colors.fg.green, "Your final score is "+str(score)+"! Great Job! The highest score is 18")
+  print(colors.fg.green, "Your final score is "+str(score)+"! Great Job! The highest score is 27")
   print(colors.off,"")
   #returns to menu
   menu()
